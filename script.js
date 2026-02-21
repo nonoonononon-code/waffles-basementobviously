@@ -1,4 +1,4 @@
-// Info modal only (theme toggle removed)
+// Info modal only
 const infoLink = document.getElementById('info-link');
 const modal = document.getElementById('info-modal');
 const closeBtn = document.querySelector('.close');
