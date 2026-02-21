@@ -1,52 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Waffles’ Basement™</title>
+  <title>Waffles Basement</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Floating circles -->
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
+  <nav>
+    <a href="https://discord.gg/wfb">🎉 Join</a>
+    <a href="#details">ℹ️ Info</a>
+    <a href="#events">📅 Events</a>
+    <a href="#bots">🤖 Bots</a>
+    <a href="#contact">💬 Contact</a>
+    <a href="#subscriptions">👑 Waffles+</a>
+    <div class="dropdown">
+      <a href="#">⚙️ More ▾</a>
+      <div class="dropdown-content">
+        <a href="#faq">❓ FAQ</a>
+        <a href="#themes">🎨 Themes</a>
+      </div>
+    </div>
+    <button id="theme-toggle">🌓 Switch Theme</button>
+  </nav>
 
-<nav>
-  <a href="https://discord.gg/wfb">Join</a>
-  <a href="#details">Info</a>
-</nav>
-
-<div class="hero">
-  <h1>Welcome to Waffles’ Basement™</h1>
-  <p>A premium server experience with paid bots, exclusive content, and a modern community vibe.</p>
-  <div class="buttons">
-    <a href="https://discord.gg/wfb">Join Now</a>
+  <div id="events" class="info">
+    <h2>Events</h2>
+    <p>Giveaways, competitions, and fun community events.</p>
   </div>
-</div>
 
-<div id="details" class="info">
-  <h2>About Us</h2>
-  <p><strong>Est. 17 November 2024</strong></p>
-  <p>Waffles’ Basement™ is a chill, active Discord community where everyone is welcome. Whether you want to hang out, make friends, or just relax after a long day, this is your place.</p>
-  <hr>
-  <h2>🎉 Active & Fun Community</h2>
-  <p>We pride ourselves on being active and engaging. There’s always someone to talk to, something happening, or a conversation to jump into.</p>
-  <hr>
-  <h2>🎁 Giveaways & Events</h2>
-  <p>We regularly host exciting giveaways and events. From cool perks to special prizes, there’s always a chance to win something.</p>
-  <hr>
-  <h2>🤖 Premium Bots & Features</h2>
-  <p>Our server includes high-quality paid bots such as Bleed, providing powerful features and advanced commands.</p>
-  <hr>
-  <h2>🛋️ A Place to Chill</h2>
-  <p>No pressure, no stress — just good vibes, good people, and a cozy atmosphere.</p>
-  <hr>
-  <h2>🚀 Join the Basement</h2>
-  <p>If you’re looking for a welcoming Discord server with active members, fun giveaways, and premium features, Waffles’ Basement™ is the place to be.</p>
-</div>
+  <div id="bots" class="info">
+    <h2>Premium Bots</h2>
+    <p>Paid bots like Bleed with advanced features.</p>
+  </div>
 
-<script src="script.js"></script>
+  <div id="contact" class="info">
+    <h2>Contact</h2>
+    <p>Reach out to staff anytime for help or suggestions.</p>
+  </div>
+
+  <div id="subscriptions" class="info">
+    <h2>Waffles+ Subscriptions</h2>
+    <p>Unlock exclusive perks instantly:</p>
+
+    <div class="subscription">
+      <h3>Monthly</h3>
+      <ul>
+        <li>👑 Exclusive Roles</li>
+        <li>🛠️ Extra Permissions</li>
+      </ul>
+      <a class="button" href="https://www.paypal.com/ncp/payment/WVPTCKUB4XT3L">Subscribe Monthly</a>
+    </div>
+
+    <div class="subscription">
+      <h3>Yearly</h3>
+      <ul>
+        <li>👑 Exclusive Roles</li>
+        <li>🛠️ Extra Permissions</li>
+      </ul>
+      <a class="button" href="https://www.paypal.com/ncp/payment/FWCWLTD6T77P6">Subscribe Yearly</a>
+    </div>
+
+    <div class="subscription">
+      <h3>Permanent</h3>
+      <ul>
+        <li>👑 Exclusive Roles</li>
+        <li>🛠️ Extra Permissions</li>
+      </ul>
+      <a class="button" href="https://www.paypal.com/ncp/payment/4ULMGMLEAM9ZS">Subscribe Forever</a>
+    </div>
+  </div>
+
+  <div id="faq" class="info">
+    <h2>FAQ</h2>
+    <p>Answers to common questions about Waffles+.</p>
+  </div>
+
+  <div id="themes" class="info">
+    <h2>Theme Showcase</h2>
+    <p>Switch between dark and light instantly with the toggle above.</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
