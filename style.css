@@ -1,8 +1,8 @@
-/* Default dark theme */
+/* Base */
 body {
   background: #111; /* dark gray/black */
-  color: #fff;      /* white text */
-  font-family: Arial, sans-serif;
+  color: #fff;
+  font-family: 'Activa', 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -17,38 +17,54 @@ body {
   align-items: center;
   text-align: center;
   overflow: hidden;
+  padding: 20px;
 }
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.6;
-  animation: float 8s ease-in-out infinite;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: float 10s ease-in-out infinite;
 }
-.orb1 { width: 300px; height: 300px; background: #fff; top: 20%; left: 30%; }
-.orb2 { width: 250px; height: 250px; background: #aaa; bottom: 20%; right: 25%; }
+.orb1 { width: 300px; height: 300px; background: #fff; top: 10%; left: 20%; }
+.orb2 { width: 250px; height: 250px; background: #aaa; bottom: 15%; right: 25%; }
+.orb3 { width: 200px; height: 200px; background: #666; top: 40%; right: 10%; }
+.orb4 { width: 150px; height: 150px; background: #ccc; bottom: 30%; left: 15%; }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-30px); }
 }
 
-/* Nav */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background: rgba(255,255,255,0.05);
-  padding: 15px;
+/* Hero text */
+.hero-title {
+  font-family: 'Abduction2002', sans-serif;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
-nav a {
+.hero-subtitle {
+  font-family: 'American Uncial', serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: #00aaff;
   color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  margin: 10px;
+  transition: background 0.3s ease;
+  touch-action: manipulation; /* touch-friendly */
 }
-nav a:hover { color: #00aaff; }
+.button:hover { background: #0088cc; }
 
 /* Waffles+ Title */
 .waffles-title {
+  font-family: 'Adamsky SF', sans-serif;
   font-size: 32px;
   color: #00aaff;
   text-align: center;
@@ -73,17 +89,6 @@ nav a:hover { color: #00aaff; }
 .subscription h3 { font-size: 24px; margin-bottom: 10px; color: #00aaff; }
 .subscription ul { list-style: none; padding: 0; margin: 20px 0; color: #ccc; }
 .subscription ul li { margin: 8px 0; }
-.subscription .button {
-  display: inline-block;
-  background: #00aaff;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-.subscription .button:hover { background: #0088cc; }
 
 /* Modal */
 .modal {
@@ -109,3 +114,11 @@ nav a:hover { color: #00aaff; }
   cursor: pointer;
 }
 .close:hover { color: #00aaff; }
+
+/* Responsive touch-friendly */
+@media (max-width: 768px) {
+  .hero-title { font-size: 32px; }
+  .hero-subtitle { font-size: 16px; }
+  .subscription { padding: 20px; }
+  .button { padding: 10px 18px; font-size: 14px; }
+}
