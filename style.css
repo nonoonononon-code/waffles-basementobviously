@@ -1,0 +1,124 @@
+body {
+    background: #0a0a0a;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Floating glowing circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 20s infinite ease-in-out;
+}
+.circle:nth-child(1) {
+    width: 80px; height: 80px;
+    top: 20%; left: 10%;
+    animation-duration: 25s;
+    background: rgba(0,170,255,0.2);
+    box-shadow: 0 0 20px rgba(0,170,255,0.6);
+}
+.circle:nth-child(2) {
+    width: 120px; height: 120px;
+    top: 40%; left: 70%;
+    animation-duration: 30s;
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+}
+.circle:nth-child(3) {
+    width: 60px; height: 60px;
+    top: 70%; left: 30%;
+    animation-duration: 18s;
+    background: rgba(255,0,150,0.2);
+    box-shadow: 0 0 20px rgba(255,0,150,0.6);
+}
+.circle:nth-child(4) {
+    width: 100px; height: 100px;
+    top: 10%; left: 80%;
+    animation-duration: 22s;
+    background: rgba(0,255,150,0.2);
+    box-shadow: 0 0 20px rgba(0,255,150,0.6);
+}
+@keyframes float {
+    0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+    50% { transform: translateY(-50px) translateX(30px); opacity: 0.4; }
+    100% { transform: translateY(0) translateX(0); opacity: 0.8; }
+}
+
+/* Nav bar */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 2;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #00aaff;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 20px;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+.hero .buttons a {
+    background: #00aaff;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.hero .buttons a:hover {
+    background: #0088cc;
+}
+
+/* Info section */
+.info {
+    background: #111;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.info p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+.info hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin: 40px auto;
+    width: 60%;
+}
