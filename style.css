@@ -1,3 +1,12 @@
+/* Default dark theme */
+body {
+  background: #111; /* dark gray/black */
+  color: #fff;      /* white text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 /* Hero + Orbs */
 .hero {
   position: relative;
@@ -6,8 +15,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #111;
-  color: #fff;
   text-align: center;
   overflow: hidden;
 }
@@ -33,15 +40,20 @@ nav {
   background: rgba(255,255,255,0.05);
   padding: 15px;
 }
-nav a, nav button {
+nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
-nav a:hover, nav button:hover { color: #00aaff; }
+nav a:hover { color: #00aaff; }
+
+/* Waffles+ Title */
+.waffles-title {
+  font-size: 32px;
+  color: #00aaff;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 /* Subscription cards */
 .subscription {
@@ -56,9 +68,9 @@ nav a:hover, nav button:hover { color: #00aaff; }
 }
 .subscription:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(0,170,255,0.4);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
-.subscription h3 { font-size: 28px; margin-bottom: 10px; color: #00aaff; }
+.subscription h3 { font-size: 24px; margin-bottom: 10px; color: #00aaff; }
 .subscription ul { list-style: none; padding: 0; margin: 20px 0; color: #ccc; }
 .subscription ul li { margin: 8px 0; }
 .subscription .button {
@@ -72,11 +84,6 @@ nav a:hover, nav button:hover { color: #00aaff; }
   transition: background 0.3s ease;
 }
 .subscription .button:hover { background: #0088cc; }
-
-/* Theme switcher */
-body.light { background: #f9f9f9; color: #222; }
-body.light nav { background: rgba(0,0,0,0.05); }
-body.light .subscription { background: #fff; border: 1px solid #ddd; }
 
 /* Modal */
 .modal {
