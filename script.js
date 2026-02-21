@@ -1,18 +1,24 @@
-// script.js
-
-// Example: Add a little glow pulse effect to circles
-document.querySelectorAll('.circle').forEach(circle => {
-    circle.addEventListener('mouseover', () => {
-        circle.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
-        circle.style.transform = 'scale(1.2)';
-        circle.style.boxShadow = '0 0 40px rgba(0,170,255,0.9)';
-    });
-
-    circle.addEventListener('mouseout', () => {
-        circle.style.transform = 'scale(1)';
-        circle.style.boxShadow = '';
-    });
+// Theme toggle
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('light');
 });
 
-// Placeholder for future features
-console.log("Waffles’ Basement script loaded!");
+// Info modal
+const infoLink = document.getElementById('info-link');
+const modal = document.getElementById('info-modal');
+const closeBtn = document.querySelector('.close');
+
+infoLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
