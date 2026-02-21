@@ -1,20 +1,104 @@
-/* Default = Dark mode */
-body {
+/* Hero + Orbs */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #111;
   color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.6;
+  animation: float 8s ease-in-out infinite;
+}
+.orb1 { width: 300px; height: 300px; background: #fff; top: 20%; left: 30%; }
+.orb2 { width: 250px; height: 250px; background: #aaa; bottom: 20%; right: 25%; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
-/* Light mode */
-body.light {
-  background: #f9f9f9;
-  color: #222;
+/* Nav */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
 }
+nav a, nav button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+nav a:hover, nav button:hover { color: #00aaff; }
 
-body.light nav {
-  background: rgba(0,0,0,0.05);
+/* Subscription cards */
+.subscription {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.subscription:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,170,255,0.4);
+}
+.subscription h3 { font-size: 28px; margin-bottom: 10px; color: #00aaff; }
+.subscription ul { list-style: none; padding: 0; margin: 20px 0; color: #ccc; }
+.subscription ul li { margin: 8px 0; }
+.subscription .button {
+  display: inline-block;
+  background: #00aaff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.subscription .button:hover { background: #0088cc; }
 
-body.light .subscription {
-  background: #fff;
-  border: 1px solid #ddd;
+/* Theme switcher */
+body.light { background: #f9f9f9; color: #222; }
+body.light nav { background: rgba(0,0,0,0.05); }
+body.light .subscription { background: #fff; border: 1px solid #ddd; }
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
 }
+.modal-content {
+  background: #222;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  color: #fff;
+  line-height: 1.6;
+}
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+.close:hover { color: #00aaff; }
