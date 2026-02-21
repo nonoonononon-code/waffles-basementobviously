@@ -1,17 +1,10 @@
-// Modal logic
-const modal = document.getElementById("info-modal");
-const btn = document.getElementById("info-link");
-const span = document.querySelector(".close");
-
-btn.onclick = function(e) {
-  e.preventDefault();
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
