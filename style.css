@@ -1,6 +1,6 @@
 /* Base */
 body {
-  background: #111; /* dark gray/black */
+  background: #111;
   color: #fff;
   font-family: 'Activa', 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -58,7 +58,8 @@ body {
   font-weight: bold;
   margin: 10px;
   transition: background 0.3s ease;
-  touch-action: manipulation; /* touch-friendly */
+  touch-action: manipulation;
+  font-family: 'Abduction2002', sans-serif;
 }
 .button:hover { background: #0088cc; }
 
@@ -86,8 +87,18 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
-.subscription h3 { font-size: 24px; margin-bottom: 10px; color: #00aaff; }
-.subscription ul { list-style: none; padding: 0; margin: 20px 0; color: #ccc; }
+.subscription h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00aaff;
+  font-family: 'American Uncial', serif;
+}
+.subscription ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: #ccc;
+}
 .subscription ul li { margin: 8px 0; }
 
 /* Modal */
@@ -107,6 +118,7 @@ body {
   max-width: 700px;
   color: #fff;
   line-height: 1.6;
+  font-family: 'Activa', sans-serif;
 }
 .close {
   float: right;
@@ -115,7 +127,7 @@ body {
 }
 .close:hover { color: #00aaff; }
 
-/* Responsive touch-friendly */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-title { font-size: 32px; }
   .hero-subtitle { font-size: 16px; }
