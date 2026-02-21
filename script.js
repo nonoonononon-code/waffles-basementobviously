@@ -1,9 +1,4 @@
-// Theme toggle
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('light');
-});
-
-// Info modal
+// Info modal only (theme toggle removed)
 const infoLink = document.getElementById('info-link');
 const modal = document.getElementById('info-modal');
 const closeBtn = document.querySelector('.close');
