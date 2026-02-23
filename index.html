@@ -11,15 +11,6 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Animated Water Bubbles -->
-  <div class="ice-cubes">
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-  </div>
-
   <div class="container">
     <h1>Waffle's Basement</h1>
     <p class="tagline">The sky is the limit ⚡</p>
@@ -27,9 +18,38 @@
     
     <div class="buttons">
       <a href="https://discord.gg/wfb" class="btn">Join Discord</a>
-      <a href="wafflesplus.html" class="btn premium">Waffles+</a>
-      <a href="info.html" class="btn info">Info</a>
+      <button id="wafflesBtn" class="btn premium">Waffles+</button>
+      <button id="infoBtn" class="btn info">Info</button>
     </div>
+  </div>
+
+  <!-- Watery Info Tab -->
+  <div id="infoTab" class="watery-tab">
+    <div class="tab-content">
+      <h2>About Waffle's Basement</h2>
+      <p>Est. November 17, 2024</p>
+      <p>Waffle's Basement™ is a chill, active Discord community where everyone is welcome. Whether you want to hang out, make friends, or just relax, this is your place.</p>
+      <button class="btn secondary closeTab">Close</button>
+    </div>
+    <div class="tab-bubbles"></div>
+    <div class="tab-ice"></div>
+  </div>
+
+  <!-- Watery Waffles+ Tab -->
+  <div id="wafflesTab" class="watery-tab">
+    <div class="tab-content">
+      <h2>Waffles+</h2>
+      <p>Exclusive perks for our community 🍴</p>
+      <ul>
+        <li>👑 Exclusive Roles & VIP badges</li>
+        <li>🛠️ Extra Permissions: polls, images, embeds, external emojis</li>
+        <li>⚡ Reduced slowmode in certain channels</li>
+        <li>📈 Level-based perks and more!</li>
+      </ul>
+      <button class="btn secondary closeTab">Close</button>
+    </div>
+    <div class="tab-bubbles"></div>
+    <div class="tab-ice"></div>
   </div>
 </body>
 </html>
