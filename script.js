@@ -1,11 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Site loaded with watery effects!");
+  // Tab toggling for index.html
+  const infoBtn = document.getElementById("infoBtn");
+  const wafflesBtn = document.getElementById("wafflesBtn");
+  const infoTab = document.getElementById("infoTab");
+  const wafflesTab = document.getElementById("wafflesTab");
+  const closeButtons = document.querySelectorAll(".closeTab");
 
-  // Make bubbles interactive: pop when clicked
-  const bubbles = document.querySelectorAll(".tab-bubbles::before, .tab-bubbles::after");
-  // Note: pseudo-elements can't be selected directly, so instead we can generate bubbles dynamically:
-  const bubbleContainer = document.querySelectorAll(".tab-bubbles");
-  bubbleContainer.forEach(container => {
+  if (infoBtn && infoTab) {
+    infoBtn.addEventListener("click", () => {
+      infoTab.style.display = "block";
+      if (wafflesTab) wafflesTab.style.display = "none";
+    });
+  }
+
+  if (wafflesBtn && wafflesTab) {
+    wafflesBtn.addEventListener("click", () => {
+      wafflesTab.style.display = "block";
+      if (infoTab) infoTab.style.display = "none";
+    });
+  }
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (infoTab) infoTab.style.display = "none";
+      if (wafflesTab) wafflesTab.style.display = "none";
+    });
+  });
+
+  // Dynamic bubbles & ice cubes for all pages
+  const bubbleContainers = document.querySelectorAll(".tab-bubbles");
+  bubbleContainers.forEach(container => {
     for (let i = 0; i < 6; i++) {
       const bubble = document.createElement("div");
       bubble.classList.add("bubble");
@@ -22,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Make ice cubes interactive: drift when hovered
   const iceContainers = document.querySelectorAll(".tab-ice");
   iceContainers.forEach(container => {
     for (let i = 0; i < 4; i++) {
