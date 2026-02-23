@@ -2,30 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Waffles+ | Waffle's Basement</title>
-  <link rel="stylesheet" href="site.css" />
+  <title>Waffle's Basement</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Audiowide&family=Russo+One&family=Noto+Serif+Arabic&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h1>Waffles+</h1>
-    <p class="tagline">Exclusive perks for our community 🍴</p>
-    <p class="subtext">Unlock special channels, roles, and premium features by joining Waffles+.</p>
-
-    <hr />
-
-    <h2>🎭 What You Get</h2>
-    <ul>
-      <li>👑 Exclusive Roles: Waffles+ Role, VIP-style badge, custom roles with emoji icons and colors</li>
-      <li>🛠️ Extra Permissions: Create polls, send images/GIFs/videos, embed links, use external emojis & stickers</li>
-      <li>⚡ Reduced slowmode in ⁠︴。pics and ⁠︴。face-rev</li>
-      <li>📈 Level-based perks and more!</li>
-    </ul>
-
+    <h1>Waffle's Basement</h1>
+    <p class="tagline">The sky is the limit ⚡</p>
+    <p class="subtext">A premium Discord community experience, built for fun and creativity.</p>
+    
     <div class="buttons">
-      <a href="https://www.paypal.com/ncp/payment/WVPTCKUB4XT3L" class="btn premium">Subscribe Monthly</a>
-      <a href="https://www.paypal.com/ncp/payment/FWCWLTD6T77P6" class="btn premium">Subscribe Yearly</a>
-      <a href="https://www.paypal.com/ncp/payment/4ULMGMLEAM9ZS" class="btn premium">Permanent Access</a>
+      <a href="https://discord.gg/wfb" class="btn">Join Discord</a>
+      <button id="wafflesBtn" class="btn premium">Waffles+</button>
+      <button id="infoBtn" class="btn info">Info</button>
     </div>
   </div>
-</body>
-</html>
+
+  <!-- Watery Info Tab -->
+  <div id="infoTab" class="watery-tab">
+    <div class="tab-content">
+      <h2>About Waffle's Basement</h2>
+      <p>Est. November 17, 2024</p>
+      <p>Waffle's Basement™ is a chill, active Discord community where everyone is welcome. Whether you want to hang out, make friends, or just relax, this is your place.</p>
+      <button class="btn secondary closeTab">Close</button>
+    </div>
+    <div class="tab-bubbles"></div>
+    <div class="tab-ice"></div>
+  </div>
+
+  <!-- Watery Waffles+ Tab -->
+  <div id="wafflesTab" class="watery-tab">
+    <div class="tab-content">
+      <h2>Waffles+</h2>
+      <p>Exclusive perks for our community 🍴</p>
+      <ul>
+        <li>👑 Exclusive Roles & VIP badges</li>
+        <li>—
