@@ -1,87 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Waffle's Basement</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Audiowide&family=Russo+One&family=Noto+Serif+Arabic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <!-- Watery background elements for main menu -->
-  <div class="main-bubbles"></div>
-  <div class="main-ice"></div>
-
-  <!-- Main container -->
-  <div class="container">
-    <h1>Waffle's Basement</h1>
-    <p class="tagline">The sky is the limit ⚡</p>
-    <p class="subtext">A premium Discord community experience, built for fun and creativity.</p>
-    
-    <div class="buttons">
-      <a href="https://discord.gg/wfb" class="btn">Join Discord</a>
-      <button id="wafflesBtn" class="btn premium">Waffles+</button>
-      <button id="infoBtn" class="btn info">Info</button>
+<!-- Info Tab -->
+<div id="infoTab" class="watery-tab">
+  <div class="tab-header">
+    <span class="tab-title">Info</span>
+    <div class="tab-controls">
+      <button class="control-btn minimize">–</button>
+      <button class="control-btn maximize">□</button>
+      <button class="control-btn close">✕</button>
     </div>
   </div>
+  <div class="tab-content">
+    <h2>About Waffle's Basement</h2>
+    <p>Est. November 17, 2024</p>
+    <p>Waffle's Basement™ is a chill, active Discord community where everyone is welcome.</p>
+  </div>
+</div>
 
-  <!-- Info Tab -->
-  <div id="infoTab" class="watery-tab">
-    <div class="tab-content">
-      <h2>About Waffle's Basement</h2>
-      <p>Est. November 17, 2024</p>
-      <p>Waffle's Basement™ is a chill, active Discord community where everyone is welcome.</p>
-      <button class="btn secondary closeTab">Close</button>
+<!-- Waffles+ Tab -->
+<div id="wafflesTab" class="watery-tab">
+  <div class="tab-header">
+    <span class="tab-title">Waffles+</span>
+    <div class="tab-controls">
+      <button class="control-btn minimize">–</button>
+      <button class="control-btn maximize">□</button>
+      <button class="control-btn close">✕</button>
     </div>
   </div>
+  <div class="tab-content">
+    <h2>Choose your subscription plan 🍴</h2>
 
-  <!-- Waffles+ Tab -->
-  <div id="wafflesTab" class="watery-tab">
-    <div class="tab-content">
-      <h2>Waffles+</h2>
-      <p>Choose your subscription plan 🍴</p>
+    <div class="plan">
+      <h3>Monthly Subscription</h3>
+      <ul>
+        <li>👑 Exclusive Roles</li>
+        <li>🛠️ Extra Permissions</li>
+        <li>⚡ Reduced slowmode</li>
+        <li>📈 Level-based perks</li>
+      </ul>
+      <a href="https://www.paypal.com/ncp/payment/WVPTCKUB4XT3L" class="btn premium">Subscribe Monthly</a>
+    </div>
 
-      <!-- Monthly -->
-      <div class="plan">
-        <h3>Monthly Subscription</h3>
-        <p>🎭 WHAT YOU GET</p>
-        <ul>
-          <li>👑 Exclusive Roles (Waffles+ Role, VIP badge, custom roles)</li>
-          <li>🛠️ Extra Permissions (polls, images, embeds, external emojis)</li>
-          <li>⚡ Reduced slowmode</li>
-          <li>📈 Level-based perks</li>
-        </ul>
-        <a href="https://www.paypal.com/ncp/payment/WVPTCKUB4XT3L" class="btn ice-btn">Subscribe Monthly</a>
-      </div>
+    <div class="plan">
+      <h3>Yearly Subscription</h3>
+      <ul>
+        <li>👑 Exclusive Roles</li>
+        <li>🛠️ Extra Permissions</li>
+        <li>⚡ Reduced slowmode</li>
+        <li>📈 Level-based perks</li>
+      </ul>
+      <a href="https://www.paypal.com/ncp/payment/FWCWLTD6T77P6" class="btn premium">Subscribe Yearly</a>
+    </div>
 
-      <!-- Yearly -->
-      <div class="plan">
-        <h3>Yearly Subscription</h3>
-        <p>🎭 WHAT YOU GET</p>
-        <ul>
-          <li>👑 Exclusive Roles (Waffles+ Role, VIP badge, custom roles)</li>
-          <li>🛠️ Extra Permissions (polls, images, embeds, external emojis)</li>
-          <li>⚡ Reduced slowmode</li>
-          <li>📈 Level-based perks</li>
-        </ul>
-        <a href="https://www.paypal.com/ncp/payment/FWCWLTD6T77P6" class="btn bubble-btn">Subscribe Yearly</a>
-      </div>
-
-      <!-- Permanent -->
-      <div class="plan">
-        <h3>Permanent Subscription</h3>
-        <p>🎭 WHAT YOU GET</p>
-        <ul>
-          <li>👑 Exclusive Roles (Waffles+ Role, VIP badge, custom roles)</li>
-          <li>🛠️ Extra Permissions (polls, images, embeds, external emojis)</li>
-          <li>⚡ Reduced slowmode</li>
-          <li>📈 Level-based perks</li>
-        </ul>
-        <a href="https://www.paypal.com/ncp/payment/4ULMGMLEAM9ZS" class="btn icebubble-btn">Subscribe Forever</a>
-      </div>
-
-      <button class="btn secondary closeTab">Close</button>
+    <div class="plan">
+      <h3>Permanent Subscription</h3>
+      <ul>
+        <li>👑 Exclusive Roles</li>
+        <li>🛠️ Extra Permissions</li>
+        <li>⚡ Reduced slowmode</li>
+        <li>📈 Level-based perks</li>
+      </ul>
+      <a href="https://www.paypal.com/ncp/payment/4ULMGMLEAM9ZS" class="btn premium">Subscribe Forever</a>
     </div>
   </div>
-</body>
-</html>
+</div>
