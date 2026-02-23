@@ -1,39 +1,77 @@
-.quick-buttons {
-  margin: 1.5rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #3a6ea5, #1c3f70);
+  color: #fff;
+  text-align: center;
 }
 
-/* Ice themed button */
+/* Container */
+.container {
+  margin-top: 10vh;
+  padding: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Ice themed */
 .btn.ice-btn {
   background: linear-gradient(135deg, #a3d9ff, #87cefa);
   color: #003366;
-  box-shadow: 0 0 10px rgba(173,216,230,0.8);
 }
 .btn.ice-btn:hover {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 20px rgba(173,216,230,1);
+  transform: scale(1.1);
 }
 
-/* Bubble themed button */
+/* Bubble themed */
 .btn.bubble-btn {
   background: radial-gradient(circle at top left, #00bfff, #1e90ff);
   color: #fff;
-  box-shadow: 0 0 10px rgba(0,191,255,0.7);
 }
 .btn.bubble-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0,191,255,1);
 }
 
-/* Ice + Bubble combo button */
+/* Ice + Bubble combo */
 .btn.icebubble-btn {
   background: linear-gradient(90deg, #a3d9ff, #00bfff, #87cefa);
   color: #003366;
-  box-shadow: 0 0 12px rgba(173,216,230,0.8), 0 0 12px rgba(0,191,255,0.6);
 }
 .btn.icebubble-btn:hover {
-  transform: scale(1.15) rotate(-5deg);
-  box-shadow: 0 0 25px rgba(173,216,230,1), 0 0 25px rgba(0,191,255,1);
+  transform: scale(1.15);
 }
+
+/* Tabs */
+.watery-tab {
+  display: none;
+  margin: 2rem auto;
+  width: 80%;
+  padding: 2rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.plan {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  text-align: left;
+  max-width: 600px;
+}
+.plan h3 { color: #fff; }
+.plan ul { list-style: none; padding: 0; }
+.plan ul li { margin: 0.5rem 0; }
