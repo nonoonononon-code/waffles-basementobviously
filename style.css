@@ -1,163 +1,32 @@
-/* Global background */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Noto Serif Arabic', serif;
-  text-align: center;
-  color: #f0f8ff;
-  background: linear-gradient(180deg, #001f3f, #003366, #001f3f);
-  background-attachment: fixed;
-  background-size: cover;
-  overflow-x: hidden;
+/* Ice themed button */
+.btn.ice-btn {
+  background: linear-gradient(135deg, #a3d9ff, #87cefa);
+  color: #003366;
+  box-shadow: 0 0 10px rgba(173,216,230,0.8);
+}
+.btn.ice-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 20px rgba(173,216,230,1);
 }
 
-/* Glass container */
-.container {
-  margin-top: 10vh;
-  padding: 2rem;
-  background: rgba(0, 40, 80, 0.6);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+/* Bubble themed button */
+.btn.bubble-btn {
+  background: radial-gradient(circle at top left, #00bfff, #1e90ff);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,191,255,0.7);
+}
+.btn.bubble-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,191,255,1);
 }
 
-/* Headings */
-h1 {
-  font-size: 3.5rem;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(90deg, #00bfff, #1e90ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Ice + Bubble combo button */
+.btn.icebubble-btn {
+  background: linear-gradient(90deg, #a3d9ff, #00bfff, #87cefa);
+  color: #003366;
+  box-shadow: 0 0 12px rgba(173,216,230,0.8), 0 0 12px rgba(0,191,255,0.6);
 }
-h2 {
-  font-family: 'Russo One', sans-serif;
-  color: #87cefa;
-}
-.tagline {
-  font-family: 'Audiowide', sans-serif;
-  font-size: 1.5rem;
-  color: #87cefa;
-}
-.subtext {
-  font-size: 1.2rem;
-  color: #cce7ff;
-}
-
-/* Buttons */
-.buttons { margin-top: 2rem; }
-.btn {
-  display: inline-block;
-  padding: 0.9rem 1.8rem;
-  margin: 0.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Russo One', sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,191,255,0.6); }
-.btn { background: #00bfff; color: #fff; }
-.btn.secondary { background: #1e90ff; color: #fff; }
-.btn.premium { background: linear-gradient(90deg, #ff7f50, #ffcc00); color: #000; }
-.btn.info { background: #008cff; color: #fff; }
-
-/* Watery tabs (Info + Waffles+) */
-.watery-tab {
-  display: none;
-  margin: 2rem auto;
-  width: 80%;
-  padding: 2rem;
-  background: linear-gradient(180deg, #002244, #004488, #002244);
-  border-radius: 16px;
-  position: relative;
-  color: #f0f8ff;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-}
-.tab-content { position: relative; z-index: 2; }
-
-/* Plans (used in wafflesplus.html and Waffles+ tab) */
-.plan {
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: rgba(0, 40, 80, 0.5);
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-  text-align: left;
-  max-width: 600px;
-}
-.plan h2 {
-  font-family: 'Russo One', sans-serif;
-  color: #87cefa;
-}
-.plan ul {
-  list-style: none;
-  padding: 0;
-}
-.plan ul li {
-  margin: 0.5rem 0;
-  color: #cce7ff;
-}
-.plan a.btn {
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-/* Main menu bubbles */
-.main-bubbles {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-.main-bubbles::before,
-.main-bubbles::after {
-  content: '';
-  position: absolute;
-  width: 30px; height: 30px;
-  background: rgba(0,191,255,0.6);
-  border-radius: 50%;
-  animation: floatBubble 15s infinite ease-in-out;
-}
-.main-bubbles::before { left: 25%; animation-delay: 0s; }
-.main-bubbles::after { left: 70%; animation-delay: 5s; }
-
-/* Main menu ice cubes */
-.main-ice {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-.main-ice::before,
-.main-ice::after {
-  content: '';
-  position: absolute;
-  width: 40px; height: 40px;
-  background: rgba(173,216,230,0.7);
-  border-radius: 6px;
-  animation: floatIce 18s infinite ease-in-out;
-}
-.main-ice::before { left: 20%; animation-delay: 3s; }
-.main-ice::after { left: 60%; animation-delay: 8s; }
-
-/* Hover effect for ice cubes */
-.main-ice::before:hover,
-.main-ice::after:hover {
-  transform: scale(1.2) rotate(20deg);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 0 20px rgba(173,216,230,0.9);
-}
-
-/* Animations */
-@keyframes floatBubble {
-  0%   { transform: translateY(0) scale(1); opacity: 0.8; }
-  50%  { transform: translateY(250px) scale(1.2); opacity: 0.4; }
-  100% { transform: translateY(0) scale(1); opacity: 0.8; }
-}
-@keyframes floatIce {
-  0%   { transform: translateY(0) rotate(0deg); opacity: 0.9; }
-  50%  { transform: translateY(300px) rotate(180deg); opacity: 0.5; }
-  100% { transform: translateY(0) rotate(360deg); opacity: 0.9; }
+.btn.icebubble-btn:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 0 25px rgba(173,216,230,1), 0 0 25px rgba(0,191,255,1);
 }
