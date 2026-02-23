@@ -1,26 +1,23 @@
-document.querySelectorAll('.watery-tab').forEach(tab => {
-  const minimizeBtn = tab.querySelector('.control-btn.minimize');
-  const maximizeBtn = tab.querySelector('.control-btn.maximize');
-  const closeBtn = tab.querySelector('.control-btn.close');
-  const content = tab.querySelector('.tab-content');
+// Grab buttons and tabs
+const infoBtn = document.getElementById("infoBtn");
+const wafflesBtn = document.getElementById("wafflesBtn");
+const infoTab = document.getElementById("infoTab");
+const wafflesTab = document.getElementById("wafflesTab");
 
-  minimizeBtn.addEventListener('click', () => {
-    content.style.display = content.style.display === 'none' ? 'block' : 'none';
-  });
+// Hide all tabs
+function hideTabs() {
+  infoTab.style.display = "none";
+  wafflesTab.style.display = "none";
+}
 
-  maximizeBtn.addEventListener('click', () => {
-    if (tab.classList.contains('fullscreen')) {
-      tab.classList.remove('fullscreen');
-      tab.style.width = '80%';
-      tab.style.height = 'auto';
-    } else {
-      tab.classList.add('fullscreen');
-      tab.style.width = '100%';
-      tab.style.height = '100vh';
-    }
-  });
+// Show Info tab
+infoBtn.addEventListener("click", () => {
+  hideTabs();
+  infoTab.style.display = "block";
+});
 
-  closeBtn.addEventListener('click', () => {
-    tab.style.display = 'none';
-  });
+// Show Waffles+ tab
+wafflesBtn.addEventListener("click", () => {
+  hideTabs();
+  wafflesTab.style.display = "block";
 });
