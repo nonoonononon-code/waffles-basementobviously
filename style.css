@@ -142,6 +142,14 @@ h2 {
 .main-ice::before { left: 20%; animation-delay: 3s; }
 .main-ice::after { left: 60%; animation-delay: 8s; }
 
+/* Hover effect for ice cubes */
+.main-ice::before:hover,
+.main-ice::after:hover {
+  transform: scale(1.2) rotate(20deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(173,216,230,0.9);
+}
+
 /* Animations */
 @keyframes floatBubble {
   0%   { transform: translateY(0) scale(1); opacity: 0.8; }
