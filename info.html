@@ -1,28 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Info | Waffle's Basement</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div class="container">
-    <h1>About Waffle's Basement</h1>
-    <p class="tagline">Est. November 17, 2024</p>
-    <p class="subtext">A chill, active Discord community where everyone is welcome.</p>
-    <h2>🎉 Active & Fun Community</h2>
-    <p>Always something happening, always someone to talk to.</p>
-    <h2>🎁 Giveaways & Events</h2>
-    <p>Regular giveaways and fun events for members.</p>
-    <h2>🤖 Premium Bots</h2>
-    <p>We use high-quality bots like Bleed to enhance your experience.</p>
-    <div class="buttons">
-      <a href="index.html" class="btn secondary">Back Home</a>
-      <a href="https://discord.gg/wfb" class="btn">Join Discord</a>
-    </div>
-  </div>
-  <div class="tab-bubbles"></div>
-  <div class="tab-ice"></div>
-</body>
-</html>
+/* Tab header bar */
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, #e6f0ff, #99ccff);
+  border-bottom: 1px solid #6699cc;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px 8px 0 0;
+  box-shadow: inset 0 1px 0 #fff;
+}
+
+.tab-title {
+  font-weight: bold;
+  color: #003366;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Control buttons */
+.tab-controls {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.control-btn {
+  width: 28px;
+  height: 22px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #fdfdfd, #dcdcdc);
+  font-weight: bold;
+  font-family: "Segoe UI", sans-serif;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 #fff, 0 1px 3px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+  background: linear-gradient(180deg, #e6f0ff, #cce0ff);
+  border-color: #99c2ff;
+  box-shadow: inset 0 1px 0 #fff, 0 2px 6px rgba(0,0,0,0.4);
+}
